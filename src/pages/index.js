@@ -1,149 +1,109 @@
-import * as React from "react"
+import React from "react"
+import {Link} from 'gatsby'
+import styles from "../styles/styles.module.css"
+import titleLine from "../images/roles-title-line.svg"
+import contactTitleLine from "../images/contact-title-line.svg"
+import feRolesImg from "../images/fsd-role.svg"
+import deRolesImg from "../images/de-role.svg"
+import mlRolesImg from "../images/ml-role.svg"
+import linkedinImg from "../images/linkedin.svg"
+import instagramImg from "../images/instagram.svg"
+import emailImg from "../images/email.svg"
 
-// styles
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-const headingAccentStyles = {
-  color: "#663399",
-}
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
-const listStyles = {
-  marginBottom: 96,
-  paddingLeft: 0,
-}
-const listItemStyles = {
-  fontWeight: "300",
-  fontSize: "24px",
-  maxWidth: "560px",
-}
 
-const linkStyle = {
-  color: "#8954A8",
-  fontWeight: "bold",
-  fontSize: "16px",
-  verticalAlign: "5%",
-}
-
-const docLinkStyle = {
-  ...linkStyle,
-  listStyleType: "none",
-  marginBottom: 24,
-}
-
-const descriptionStyle = {
-  color: "#232129",
-  fontSize: "14px",
-}
-
-const docLink = {
-  text: "Documentation",
-  url: "https://www.gatsbyjs.com/docs/",
-  color: "#8954A8",
-}
-// data
-const links = [
-  {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial/",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-    color: "#E95800",
-  },
-  {
-    text: "How to Guides",
-    url: "https://www.gatsbyjs.com/docs/how-to/",
-    description:
-      "Practical step-by-step guides to help you achieve a specific goal. Most useful when you're trying to get something done.",
-    color: "#1099A8",
-  },
-  {
-    text: "Reference Guides",
-    url: "https://www.gatsbyjs.com/docs/reference/",
-    description:
-      "Nitty-gritty technical descriptions of how Gatsby works. Most useful when you need detailed information about Gatsby's APIs.",
-    color: "#BC027F",
-  },
-  {
-    text: "Conceptual Guides",
-    url: "https://www.gatsbyjs.com/docs/conceptual/",
-    description:
-      "Big-picture explanations of higher-level Gatsby concepts. Most useful for building understanding of a particular topic.",
-    color: "#0D96F2",
-  },
-  {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-    color: "#000000",
-  },
-]
-
-// markup
 const IndexPage = () => {
   return (
-    <main style={pageStyles}>
-      <title>Home Page</title>
-      <h1 style={headingStyles}>
-        Congratulations
-        <br />
-        <span style={headingAccentStyles}>— you just made a Gatsby site! </span>
-        <span role="img" aria-label="Party popper emojis">
-          🎉🎉🎉
-        </span>
-      </h1>
-      <p style={paragraphStyles}>
-        Edit <code style={codeStyles}>src/pages/index.js</code> to see this page
-        update in real-time.{" "}
-        <span role="img" aria-label="Sunglasses smiley emoji">
-          😎
-        </span>
-      </p>
-      <ul style={listStyles}>
-        <li style={docLinkStyle}>
-          <a
-            style={linkStyle}
-            href={`${docLink.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-          >
-            {docLink.text}
-          </a>
-        </li>
-        {links.map(link => (
-          <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
-            <span>
-              <a
-                style={linkStyle}
-                href={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-              >
-                {link.text}
-              </a>
-              <p style={descriptionStyle}>{link.description}</p>
-            </span>
-          </li>
-        ))}
-      </ul>
-      <img
-        alt="Gatsby G Logo"
-        src="data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2a10 10 0 110 20 10 10 0 010-20zm0 2c-3.73 0-6.86 2.55-7.75 6L14 19.75c3.45-.89 6-4.02 6-7.75h-5.25v1.5h3.45a6.37 6.37 0 01-3.89 4.44L6.06 9.69C7 7.31 9.3 5.63 12 5.63c2.13 0 4 1.04 5.18 2.65l1.23-1.06A7.959 7.959 0 0012 4zm-8 8a8 8 0 008 8c.04 0 .09 0-8-8z' fill='%23639'/%3E%3C/svg%3E"
-      />
-    </main>
+   <div>
+   <span id="home" className="anchor"></span>
+
+	<nav id="nav">
+		<a href="#home">HOME</a>
+		<a href="#roles">ROLES</a>
+		<a href="#contact">CONTACT</a>
+		<Link to="/blog">BLOG</Link>
+	</nav>
+
+
+	<div className={styles.bodyContainer}>
+		<section>
+			<div className={styles.header} data-aos="fade-down">
+					<span id="home" className={styles.anchor}></span>
+					<div className={styles.idCard}>
+						<div className={styles.cardContainer}>
+							<div className={styles.idProfile}></div>
+							<span className={styles.idName}>Hello, I'm Desmond</span>
+						</div>
+					</div>
+			</div>
+		</section>
+		<section>
+			<div className={styles.rolesContainer}>
+			<span id="roles" className={styles.anchor}></span>
+				<div className={styles.rolesTitleContainer}>
+					<img className={styles.rolesTitleLine} src={titleLine} alt=""/>
+					<span className={styles.rolesTitle}>My Roles</span>
+				</div>
+					<div className={styles.rolesCardContainer}>
+						<div className={styles.rolesCard} data-aos="fade-right">
+							<div className={styles.rolesCardPadding}>
+								<img className={styles.rolesImg} src={feRolesImg} alt="Full Stack Engineer" />
+								<div className={styles.rolesBody}>
+									<span className={styles.rolesSubtitle}>Full Stack Engineer</span>
+									<span className={styles.rolesText}>Design, Create and Manage Web Apps all the way from the Front End to the Back End</span>
+								</div>
+							</div>
+						</div>
+						<div className={styles.rolesCard} data-aos="fade-left">
+							<div className={styles.rolesCardPadding}>
+								<img className={styles.rolesImg} src={deRolesImg} alt="Data Engineer" />
+								<div className={styles.rolesBody}>
+									<span className={styles.rolesSubtitle}>Data Engineer</span>
+									<span className={styles.rolesText}>Create a meaningful insight from various data through beautifull dashboard</span>
+								</div>
+							</div>
+						</div>
+						<div className={styles.rolesCard} data-aos="fade-right">
+							<div className={styles.rolesCardPadding}>
+								<img className={styles.rolesImg} src={mlRolesImg} alt="Machine Learning" />
+								<div className={styles.rolesBody}>
+									<span className={styles.rolesSubtitle}>Machine Learning</span>
+									<span className={styles.rolesText}>Make a suitable prediction model to help the user make a decisions</span>
+								</div>
+							</div>
+						</div>
+					</div>
+			</div>
+		</section>
+		<section>
+			<div className={styles.contactContainer}>
+				<span id="contact" className={styles.anchor}></span>
+				<div className={styles.contactTitleContainer}>
+					<img src={contactTitleLine} className={styles.contactTitleLine} alt=""/>
+					<span className={styles.contactTitle}>Hit me up on</span>
+				</div>
+				<div className={styles.linkContainer}  data-aos="flip-up">
+					<div className={styles.linkCard}>
+						<a className={styles.linkItem} href="https://www.linkedin.com/in/desmond-kristian-84aa92129/" target="_blank" rel="noopener noreferrer">
+							<img src={linkedinImg} className={styles.linkedin} alt="Linkedin"/>
+							<span className={styles.linkText}>Linkedin</span>
+						</a>
+						<a className={styles.linkItem} href="https://www.instagram.com/desmondsiahaan/" target="_blank" rel="noopener noreferrer">
+							<img src={instagramImg} className={styles.instagram} alt="Instagram"/>
+							<span className={styles.linkText}>Instagram</span>
+						</a>
+						<a className={styles.linkItem} href="mailto:desmon.kristian@gmail.com" target="_blank" rel="noopener noreferrer">
+							<img src={emailImg} className={styles.email} alt="Email"/>
+							<span className={styles.linkText}>Email</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<div className={styles.footer}>
+			<span>© Made by Desmond, All rights reserved.</span>
+		</div>
+	</div>
+   </div>
   )
 }
 
