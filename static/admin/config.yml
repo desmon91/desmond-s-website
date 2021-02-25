@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: desmon91/desmond-s-website.git
+  repo: desmon91/desmond-s-website
   branch: master
 
 media_folder: static/assets
