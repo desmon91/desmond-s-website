@@ -1,6 +1,16 @@
-.container {
-  min-height: 100vh;
+html {
   background: whitesmoke;
+}
+.container {
+  width: "100%";
+  height: "100%";
+  display: "flex";
+  flex-direction: "column";
+}
+.layout {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -8,14 +18,19 @@
 }
 .header {
   display: flex;
-  justify-content: flex-start;
-  background: whitesmoke;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.headerBorder {
+  width: 50%;
+  border-bottom: 0.5px dotted black;
 }
 
 .headerNav {
   display: flex;
   justify-content: space-around;
-  width: 30%;
+  width: 50%;
   font-family: Poppins;
   font-style: normal;
   font-weight: bold;
@@ -54,4 +69,14 @@
 .card:hover,
 .card:active {
   transform: scale(1.1);
+}
+
+.bodyPost {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: justify;
 }

@@ -13,6 +13,7 @@ export default function Header () {
                     BLOG
                 </Link>
                 </div>
+        <span className={componentStyle.headerBorder}/>
         </div>
         )
 }

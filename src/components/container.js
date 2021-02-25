@@ -1,8 +1,9 @@
 import React from "react"
+import componentStyle from '../styles/component.module.css'
 
 export default function Container ({ children }) {
     return (
-        <div style={{width:"100%", height:"100%", display: "flex", flexDirection:"column"}}>
+        <div className={componentStyle.container}>
             {children}
         </div>
         )
