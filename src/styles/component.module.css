@@ -8,7 +8,6 @@ html {
   flex-direction: "column";
 }
 .layout {
-  margin-top: 50px;
   margin-bottom: 50px;
   min-height: 100vh;
   display: flex;

@@ -8,10 +8,9 @@ import componentStyle from "../styles/component.module.css"
 
 
 export default function Blog({data}){
-  let post
-  if (post){
-    post = data.allMarkdownRemark.edges
-  } else post = []
+  
+    const post = data.allMarkdownRemark.edges
+
     return (
         <Container>
              <Header />

@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useEffect} from "react"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import styles from "../styles/styles.module.css"
 import titleLine from "../images/roles-title-line.svg"
@@ -9,18 +9,32 @@ import mlRolesImg from "../images/ml-role.svg"
 import linkedinImg from "../images/linkedin.svg"
 import instagramImg from "../images/instagram.svg"
 import emailImg from "../images/email.svg"
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-
 
 const IndexPage = () => {
-AOS.init({
- delay: 100, // values from 0 to 3000, with step 50ms
- duration: 800, // values from 0 to 3000, with step 50ms
- once: false, // whether animation should happen only once - while scrolling down
- mirror: false, // whether elements should animate out while scrolling past them
- anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
-});
+  
+	let AOS;
+	useEffect(() => {
+	  /**
+	   * Server-side rendering does not provide the 'document' object
+	   * therefore this import is required either in useEffect or componentDidMount as they
+	   * are exclusively executed on a client
+	   */
+	  const AOS = require("aos");
+	  AOS.init({
+		  delay: 100, // values from 0 to 3000, with step 50ms
+		  duration: 800, // values from 0 to 3000, with step 50ms
+		  once: false, // whether animation should happen only once - while scrolling down
+		  mirror: false, // whether elements should animate out while scrolling past them
+		  anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+	  });
+	}, []);
+  
+	useEffect(() => {
+	  if (AOS) {
+		AOS.refresh();
+	  }
+	});
+  
   return (
    <div>
    <span id="home" className="anchor"></span>
