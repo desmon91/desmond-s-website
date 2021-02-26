@@ -7,7 +7,6 @@ import componentStyle from "../styles/component.module.css"
 import { Disqus } from 'gatsby-plugin-disqus'
 
 export default function BlogPost({data}){
-    console.log(data)
     const post = data.markdownRemark
     const id = post.id
     const title = post.frontmatter.title

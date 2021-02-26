@@ -40,26 +40,26 @@ export default function Blog({data}){
 }
 
 
-// export const query = graphql`
-//   query {
-//     allMarkdownRemark (
-//       sort: { order: DESC, fields: [frontmatter___date] }
-//     ) {
-//       totalCount
-//       edges {
-//         node {
-//           id
-//           frontmatter {
-//             title
-//             date(formatString: "DD MMMM, YYYY")
-//             image
-//           }
-//           fields {
-//             slug
-//           }
-//           excerpt
-//         }
-//       }
-//     }
-//   }
-// `
+export const query = graphql`
+  query {
+    allMarkdownRemark (
+      sort: { order: DESC, fields: [frontmatter___date] }
+    ) {
+      totalCount
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            date(formatString: "DD MMMM, YYYY")
+            image
+          }
+          fields {
+            slug
+          }
+          excerpt
+        }
+      }
+    }
+  }
+`
