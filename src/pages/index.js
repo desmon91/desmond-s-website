@@ -1,5 +1,5 @@
 import React from "react"
-import {Link} from 'gatsby'
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import styles from "../styles/styles.module.css"
 import titleLine from "../images/roles-title-line.svg"
 import contactTitleLine from "../images/contact-title-line.svg"
@@ -9,18 +9,26 @@ import mlRolesImg from "../images/ml-role.svg"
 import linkedinImg from "../images/linkedin.svg"
 import instagramImg from "../images/instagram.svg"
 import emailImg from "../images/email.svg"
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 const IndexPage = () => {
+AOS.init({
+ delay: 100, // values from 0 to 3000, with step 50ms
+ duration: 800, // values from 0 to 3000, with step 50ms
+ once: false, // whether animation should happen only once - while scrolling down
+ mirror: false, // whether elements should animate out while scrolling past them
+ anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+});
   return (
    <div>
    <span id="home" className="anchor"></span>
-
 	<nav id="nav">
 		<a href="#home">HOME</a>
 		<a href="#roles">ROLES</a>
 		<a href="#contact">CONTACT</a>
-		<Link to="/blog">BLOG</Link>
+		<AniLink paintDrip to="/blog" color="whitesmoke">BLOG</AniLink>
 	</nav>
 
 

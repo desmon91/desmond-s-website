@@ -80,3 +80,23 @@ html {
   flex-direction: column;
   text-align: justify;
 }
+
+.noPost {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 72px;
+  color: gray;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: justify;
+}
+
+.comment {
+  margin-left: 25%;
+  margin-right: 25%;
+}

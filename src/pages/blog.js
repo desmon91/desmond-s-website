@@ -6,16 +6,22 @@ import Card from "../components/card"
 import { Link, graphql } from "gatsby"
 import componentStyle from "../styles/component.module.css"
 
+
 export default function Blog({data}){
+  let post
+  if (post){
+    post = data.allMarkdownRemark.edges
+  } else post = []
     return (
         <Container>
              <Header />
              <Layout>
                  {
-                 data.allMarkdownRemark.edges.map(({ node })=>(
+                 post.length < 1 ? <div className={componentStyle.noPost}>NO BLOG POST YET</div> :
+                 post.map(({ node })=>(
                      <Card key={node.id}>
-                         <Link  to={node.fields.slug} className={componentStyle.linkStyle}>
-                         <img src={node.frontmatter.thumbnail} alt="" style={{width:"200px", height:"100px"}}/>
+                         <Link  to={node.fields.slug} className={componentStyle.linkStyle} >
+                         <img src={node.frontmatter.image} alt="" style={{width:"200px", height:"100px"}}/>
                          <div style={{width:"100%", padding:"10px", display:"flex", justifyContent:"space-around",flexDirection:"column"}}>
                             <div style={{display:"flex", justifyContent:"space-between", flexDirection:"row"}}>
                                 <h2>{node.frontmatter.title}</h2>
@@ -34,26 +40,26 @@ export default function Blog({data}){
 }
 
 
-export const query = graphql`
-  query {
-    allMarkdownRemark (
-      sort: { order: DESC, fields: [frontmatter___date] }
-    ) {
-      totalCount
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            date(formatString: "DD MMMM, YYYY")
-            thumbnail
-          }
-          fields {
-            slug
-          }
-          excerpt
-        }
-      }
-    }
-  }
-`
+// export const query = graphql`
+//   query {
+//     allMarkdownRemark (
+//       sort: { order: DESC, fields: [frontmatter___date] }
+//     ) {
+//       totalCount
+//       edges {
+//         node {
+//           id
+//           frontmatter {
+//             title
+//             date(formatString: "DD MMMM, YYYY")
+//             image
+//           }
+//           fields {
+//             slug
+//           }
+//           excerpt
+//         }
+//       }
+//     }
+//   }
+// `
