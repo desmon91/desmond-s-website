@@ -36,16 +36,14 @@ const IndexPage = () => {
 	});
   
   return (
-   <div>
-   <span id="home" className="anchor"></span>
-	<nav id="nav">
+   <React.Fragment>
+	<span id="home" className={styles.anchor}></span>
+	<nav id="nav" >
 		<a href="#home">HOME</a>
 		<a href="#roles">ROLES</a>
 		<a href="#contact">CONTACT</a>
 		<AniLink paintDrip to="/blog" color="whitesmoke">BLOG</AniLink>
 	</nav>
-
-
 	<div className={styles.bodyContainer}>
 		<section>
 			<div className={styles.header} data-aos="fade-down">
@@ -125,7 +123,7 @@ const IndexPage = () => {
 			<span>© Made by Desmond, All rights reserved.</span>
 		</div>
 	</div>
-   </div>
+   </React.Fragment>
   )
 }
 
