@@ -60,6 +60,7 @@ nav > a:active {
 
 .bodyContainer {
   position: relative;
+  margin-top: 100px;
   width: 100%;
   height: var(--screenHeight);
 
