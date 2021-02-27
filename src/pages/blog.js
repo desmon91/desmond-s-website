@@ -19,10 +19,10 @@ export default function Blog({data}){
                  post.length < 1 ? <div className={componentStyle.noPost}>NO BLOG POST YET</div> :
                  post.map(({ node })=>(
                      <Card key={node.id}>
-                         <Link  to={node.fields.slug} className={componentStyle.linkStyle} >
+                         <Link  to={node.fields.slug} className={componentStyle.cardLink} >
                          <img src={node.frontmatter.image} alt="" style={{width:"200px", height:"100px"}}/>
-                         <div style={{width:"100%", padding:"10px", display:"flex", justifyContent:"space-around",flexDirection:"column"}}>
-                            <div style={{display:"flex", justifyContent:"space-between", flexDirection:"row"}}>
+                         <div className={componentStyle.cardBodyContainer}>
+                            <div className={componentStyle.cardHeader}>
                                 <h2>{node.frontmatter.title}</h2>
                                 <span style={{color: "grey"}}> {node.frontmatter.date} </span>
                             </div>

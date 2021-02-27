@@ -22,22 +22,19 @@ export default function BlogPost({data}){
         <Container>
              <Header />
              <Layout>
-             <div style={{width: "600px"}}>
+             <div className={componentStyle.blogPost}>
                   <h1 align="left">{title}</h1>
                   <h3 align="left" style={{color: "grey"}} > {date} </h3>
-             <div className={componentStyle.bodyPost}>
-                  <div dangerouslySetInnerHTML={{ __html: post.html }} />
-             </div>
+                  <div className={componentStyle.bodyPost} dangerouslySetInnerHTML={{ __html: post.html }} />
+          
                 {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <ul className="taglist">
+                  Tags:&nbsp;
                   {tags.map((tag) => (
-                    <li key={tag + `tag`}>
-                     {tag}
-                    </li>
+                    <span key={tag + `tag`}>
+                     {tag}&nbsp;
+                    </span>
                   ))}
-                </ul>
               </div>
             ) : null}
             </div>
