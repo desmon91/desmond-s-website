@@ -6,6 +6,19 @@ module.exports = {
   plugins: [
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 600,
+            },
+          },
+        ],
+      },
+    },
     "gatsby-plugin-netlify-cms",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
@@ -37,19 +50,6 @@ module.exports = {
       options: {
         path: `${__dirname}/src/images`,
         name: 'images',
-      },
-    },
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 800,
-            },
-          },
-        ],
       },
     },
     {

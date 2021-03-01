@@ -99,9 +99,15 @@ html {
   margin-bottom: 25px;
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-direction: column;
   text-align: justify;
+}
+
+.bodyPost > p {
+  max-width: inherit;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .noPost {
@@ -122,6 +128,7 @@ html {
 .blogPost {
   width: 50%;
   height: 100%;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
 }
