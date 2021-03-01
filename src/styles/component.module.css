@@ -98,16 +98,17 @@ html {
   margin-top: 25px;
   margin-bottom: 25px;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.bodyPost > p {
   max-width: inherit;
-  display: flex;
   justify-content: center;
   flex-direction: column;
   text-align: justify;
+  font-family: Poppins;
+}
+.bodyPost > p > img {
+  display: block;
+  max-width: 50vw;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .noPost {

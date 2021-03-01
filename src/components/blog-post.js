@@ -30,11 +30,14 @@ export default function BlogPost({data}){
                 {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
                   Tags:&nbsp;
-                  {tags.map((tag) => (
-                    <span key={tag + `tag`}>
-                     {tag}&nbsp;
-                    </span>
+                  <ul style={{listStyleType: "circle"}}>
+                         {tags.map((tag) => (
+                    <li key={tag}>
+                     {tag}
+                    </li>
+                    
                   ))}
+                  </ul>
               </div>
             ) : null}
             </div>
