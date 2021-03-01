@@ -20,7 +20,7 @@ Before we start, there is some prerequisite to keep in mind.
 
 <br/>
 
-Assuming, you already have all the the requirement above lets get into it.
+Assuming you already have all the the requirement above, lets get into it.
 
 <br/>
 
@@ -28,7 +28,7 @@ Assuming, you already have all the the requirement above lets get into it.
 
 <br/>
 
-First, lets open the ODBC, go into the System DSN tab, and click add. If you installed the PostgreSQL ODBC server correctly you will see the PostgreSQL name on it. Choose the PostgreSQL ANSI one that suitable for your windows version either 32-bit or 64-bit.
+First, lets open the **ODBC** (you can search it from windows search start menu), go into the **System DSN** tab, and click add. If you installed the PostgreSQL ODBC server correctly you will see the PostgreSQL name on it. Choose the **PostgreSQL ANSI** one that suitable for your windows version either 32-bit or 64-bit.
 
 <br/>
 
@@ -36,7 +36,7 @@ First, lets open the ODBC, go into the System DSN tab, and click add. If you ins
 
 <br/>
 
-Second, give your Data Source a name and note it down, we will use it later in the Excel. For the Database you have to fill it with the name of the database you want to connect from the server, for the Server and Port option are the IP Address and Port of your database server. Click test after you fill it all, if your config is correct will show connection successful like the image above. If not, make sure your database can be accessed from the outside, database name, IP address and port are exactly the same with the PostgreSQL server.
+Second, give your **Data Source** a name and note it down, we will use it later in the Excel. For the **Database** you have to fill it with the name of the database you want to connect from the server, for the **Server** and **Port** option are the IP Address and Port of your database server. Click **Test** after you fill all the field, if your config is correct it will show connection successful like the image above. If not, make sure your database can be accessed from the outside, database name, IP address and port are exactly the same with the PostgreSQL server.
 
 <br/>
 
@@ -52,7 +52,7 @@ Third, Make sure your Power Pivot available to use. Go into **File > Option > Cu
 
 <br/>
 
-After that go into the Power Pivot tab or ribbon and choose Manage. It will open a new window for you.
+After that go into the **Power Pivot** tab or ribbon and choose **Manage**. It will open a new window for you.
 
 <br/>
 
@@ -60,7 +60,7 @@ After that go into the Power Pivot tab or ribbon and choose Manage. It will open
 
 <br/>
 
-From the Home tab or ribbon choose the **From Other Sources** and choose the **Others (OLED/ODBC)** connection and click next. Give connection a name, click Build, navigate to the Provider tab and choose Microsoft OLE DB Provider for ODBC Drivers, click next or navigate to the Connection tab. On the Specify the source of data click the drop down from the Use data source name and you will see the name of the server that we made from the first step of this guide and test the connection. If it is not connected or error out. Please make sure again you config it correctly from the first step of this guide.
+From the Home tab or ribbon choose the **From Other Sources** and choose the **Others (OLED/ODBC)** connection and click next. Give connection a name, click **Build**,navigate to the **Provider** tab and choose **Microsoft OLE DB Provider for ODBC Drivers**, click next or navigate to the **Connection** tab. On the **Specify the source of data** click the drop down from the **Use data source name** and you will see the name of the server that we made from the first step of this guide and test the connection. If it is not connected or error out. Please make sure again you configure it correctly from the first step of this guide.
 
 <br/>
 
@@ -68,7 +68,7 @@ From the Home tab or ribbon choose the **From Other Sources** and choose the **O
 
 <br/>
 
-Click OK to exit the Data Link properties config and click next to proceed further. After that you can choose to just select a table from your PostgreSQL server or write the query with SQL manually. Lets just choose to write query manually for now to make it more flexible and validate the SQL query you wrote, after its validated, click Finish and close the Table Import Wizard.
+Click OK to exit the **Data Link properties** config and click next to proceed further. After that you can choose to just **select a table** from your PostgreSQL server or **write the query** with SQL manually. Lets just choose to write query manually for now to make it more flexible and validate the SQL query you wrote, after its validated, click Finish and close the Table Import Wizard.
 
 <br/>
 
@@ -76,7 +76,7 @@ Click OK to exit the Data Link properties config and click next to proceed furth
 
 <br/>
 
-Now you will see your table imported on the excel data model. Our next step is to import it as a pivot table on our excel sheet. Click the Pivot Table from the Home tab or ribbon on your data model and choose existing worksheet, then you can drag and drop from your query to row and column of your choosing. To make it even further, click on any cell inside your pivot table and navigate to the Analyze tab or ribbon, click the pivot chart and choose your suitable chart type, click OK and we are Done!
+Now you will see your table imported on the excel data model. Our next step is to import it as a **pivot table** on our excel sheet. Click the **Pivot Table** from the **Home** tab or ribbon on your data model and choose **existing worksheet**, then you can drag and drop from your query to row and column of your choosing. To make it even further, click on any cell inside your pivot table and navigate to the **Analyze** tab or ribbon, click the **pivot chart** and choose your suitable chart type, click OK and we are Done!
 
 <br/>
 
