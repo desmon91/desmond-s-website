@@ -58,5 +58,15 @@ module.exports = {
           shortname: `desmonds-website`
       }
   },
+  {
+    resolve: "gatsby-plugin-load-script",
+    options: {
+      id: "s9-sdk",
+      async: true,
+      defer: true,
+      content: "c5e75423bb35445f8ac22a8109cb4268",
+      src: "//cdn.social9.com/js/socialshare.min.js"
+    },
+  }
   ],
 };
