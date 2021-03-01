@@ -162,10 +162,16 @@ html {
   .cardBodyContainer > p {
     padding-top: 10px;
   }
+  .blogPost {
+    width: 80%;
+  }
   .blogPost > h1 {
     font-size: 7vw;
   }
   .blogPost > h3 {
     font-size: 4vw;
+  }
+  .bodyPost > p > img {
+    max-width: 80vw;
   }
 }
