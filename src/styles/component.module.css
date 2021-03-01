@@ -174,4 +174,8 @@ html {
   .bodyPost > p > img {
     max-width: 80vw;
   }
+  .comment {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
 }
