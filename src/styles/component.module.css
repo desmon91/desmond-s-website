@@ -100,7 +100,6 @@ html {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  text-align: justify;
 }
 
 .bodyPost > p {
@@ -108,6 +107,7 @@ html {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  text-align: justify;
 }
 
 .noPost {
