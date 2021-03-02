@@ -1,34 +1,22 @@
 import React from "react"
-import Container from "./container"
-import Header from "./header"
-import Layout from "./layout"
-import {graphql} from "gatsby"
 import componentStyle from "../styles/component.module.css"
-import { Disqus } from 'gatsby-plugin-disqus'
 
-export default function BlogPost({data}){
-    const post = data.markdownRemark
-    const id = post.id
-    const title = post.frontmatter.title
-    const date = post.frontmatter.date
-    const tags = post.frontmatter.tags
-
-    let disqusConfig = {
-      identifier: id,
-      title: title,
-    }
-
+export default function BlogPost({title, date, html, tags}){
     return (
-        <Container>
-             <Header />
-             <Layout>
              <div className={componentStyle.blogPost}>
-                  <h1 align="left">{title}</h1>
-                  <h3 align="left" style={{color: "grey"}} > {date} </h3>
-                  <div className={componentStyle.bodyPost} dangerouslySetInnerHTML={{ __html: post.html }} />
-          
-                {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
+                  <h1 align="left"
+                        data-sal="slide-left"
+						data-sal-duration="1000"
+						data-sal-easing="ease">{title}</h1>
+                  <h3 align="left" style={{color: "grey"}}
+                        data-sal="slide-right"
+                        data-sal-duration="1000"
+                        data-sal-delay="500"
+                        data-sal-easing="ease"> {date} </h3>
+                  <div className={componentStyle.bodyPost}
+                        dangerouslySetInnerHTML={{ __html: html }}/>
+                  {tags && tags.length ? (
+                  <div style={{ marginTop: `4rem` }}>
                   Tags:&nbsp;
                   <ul style={{listStyleType: "circle"}}>
                          {tags.map((tag) => (
@@ -41,23 +29,5 @@ export default function BlogPost({data}){
               </div>
             ) : null}
             </div>
-             </Layout>
-             <Disqus config={disqusConfig} className={componentStyle.comment}/>
-        </Container>
-        
         )
 }
-
-export const query = graphql`
-  query($slug: String!) {
-    markdownRemark (fields: { slug: { eq: $slug } }) {
-      id
-      html
-      frontmatter {
-        title
-        date(formatString: "MMMM DD, YYYY")
-        tags
-      }
-    }
-  }
-`

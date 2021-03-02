@@ -3,7 +3,7 @@ import componentStyles from "../styles/component.module.css"
 
 export default function Layout ({ children }){
     return (
-        <div className={componentStyles.layout}>
+        <div className={componentStyles.layout} >
                 {children}
         </div>
         )

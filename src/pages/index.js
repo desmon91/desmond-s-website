@@ -1,4 +1,4 @@
-import React, {useEffect} from "react"
+import React from "react"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import styles from "../styles/styles.module.css"
 import titleLine from "../images/roles-title-line.svg"
@@ -11,32 +11,9 @@ import instagramImg from "../images/instagram.svg"
 import emailImg from "../images/email.svg"
 
 const IndexPage = () => {
-  
-	let AOS;
-	useEffect(() => {
-	  /**
-	   * Server-side rendering does not provide the 'document' object
-	   * therefore this import is required either in useEffect or componentDidMount as they
-	   * are exclusively executed on a client
-	   */
-	  const AOS = require("aos");
-	  AOS.init({
-		  delay: 100, // values from 0 to 3000, with step 50ms
-		  duration: 800, // values from 0 to 3000, with step 50ms
-		  once: false, // whether animation should happen only once - while scrolling down
-		  mirror: false, // whether elements should animate out while scrolling past them
-		  anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
-	  });
-	}, []);
-  
-	useEffect(() => {
-	  if (AOS) {
-		AOS.refresh();
-	  }
-	});
-  
+
   return (
-   <React.Fragment>
+	<div className={styles.bodyContainer}>
 	<span id="home" className={styles.anchor}></span>
 	<nav id="nav" >
 		<a href="#home">HOME</a>
@@ -44,9 +21,11 @@ const IndexPage = () => {
 		<a href="#contact">CONTACT</a>
 		<AniLink paintDrip to="/blog" color="whitesmoke">BLOG</AniLink>
 	</nav>
-	<div className={styles.bodyContainer}>
 		<section>
-			<div className={styles.header} data-aos="fade-down">
+			<div className={styles.header}
+				data-sal="slide-down"
+				data-sal-duration="1000"
+				data-sal-easing="ease">
 					<span id="home" className={styles.anchor}></span>
 					<div className={styles.idCard}>
 						<div className={styles.cardContainer}>
@@ -64,7 +43,11 @@ const IndexPage = () => {
 					<span className={styles.rolesTitle}>My Roles</span>
 				</div>
 					<div className={styles.rolesCardContainer}>
-						<div className={styles.rolesCard} data-aos="fade-right">
+						<div
+						className={styles.rolesCard}
+						data-sal="slide-right"
+						data-sal-duration="1000"
+						data-sal-easing="ease">
 							<div className={styles.rolesCardPadding}>
 								<img className={styles.rolesImg} src={feRolesImg} alt="Full Stack Engineer" />
 								<div className={styles.rolesBody}>
@@ -73,7 +56,11 @@ const IndexPage = () => {
 								</div>
 							</div>
 						</div>
-						<div className={styles.rolesCard} data-aos="fade-left">
+						<div
+						className={styles.rolesCard}
+						data-sal="slide-left"
+						data-sal-duration="1000"
+						data-sal-easing="ease">
 							<div className={styles.rolesCardPadding}>
 								<img className={styles.rolesImg} src={deRolesImg} alt="Data Engineer" />
 								<div className={styles.rolesBody}>
@@ -82,7 +69,11 @@ const IndexPage = () => {
 								</div>
 							</div>
 						</div>
-						<div className={styles.rolesCard} data-aos="fade-right">
+						<div
+						className={styles.rolesCard}
+						data-sal="slide-right"
+						data-sal-duration="1000"
+						data-sal-easing="ease">
 							<div className={styles.rolesCardPadding}>
 								<img className={styles.rolesImg} src={mlRolesImg} alt="Machine Learning" />
 								<div className={styles.rolesBody}>
@@ -101,7 +92,11 @@ const IndexPage = () => {
 					<img src={contactTitleLine} className={styles.contactTitleLine} alt=""/>
 					<span className={styles.contactTitle}>Hit me up on</span>
 				</div>
-				<div className={styles.linkContainer}  data-aos="flip-up">
+				<div 
+					className={styles.linkContainer}
+					data-sal="flip-up"
+					data-sal-duration="1000"
+					data-sal-easing="ease">
 					<div className={styles.linkCard}>
 						<a className={styles.linkItem} href="https://www.linkedin.com/in/desmond-kristian-84aa92129/" target="_blank" rel="noopener noreferrer">
 							<img src={linkedinImg} className={styles.linkedin} alt="Linkedin"/>
@@ -123,7 +118,6 @@ const IndexPage = () => {
 			<span>© Made by Desmond, All rights reserved.</span>
 		</div>
 	</div>
-   </React.Fragment>
   )
 }
 

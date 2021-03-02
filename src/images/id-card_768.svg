@@ -1,13 +1,13 @@
-<svg width="300" height="626" viewBox="0 0 300 626" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect y="51" width="300" height="575" rx="10" fill="white"/>
+<svg width="300" height="610" viewBox="0 0 300 610" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect y="35" width="300" height="575" rx="10" fill="white"/>
 <g filter="url(#filter0_i)">
-<rect width="139" height="31" rx="10" transform="matrix(-1 0 0 1 219 73)" fill="#D2F1EB"/>
+<rect width="139" height="31" rx="10" transform="matrix(-1 0 0 1 219 57)" fill="#D2F1EB"/>
 </g>
 <g filter="url(#filter1_d)">
 <rect width="64" height="60" transform="matrix(-1 0 0 1 182 0)" fill="#C4C4C4"/>
 </g>
 <defs>
-<filter id="filter0_i" x="80" y="73" width="139" height="35" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_i" x="80" y="57" width="139" height="35" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>

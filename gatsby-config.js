@@ -19,6 +19,7 @@ module.exports = {
         ],
       },
     },
+    `gatsby-plugin-scroll-reveal`,
     "gatsby-plugin-netlify-cms",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",

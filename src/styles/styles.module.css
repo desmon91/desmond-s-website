@@ -2,27 +2,20 @@
 
 :root {
   --screenWidth: 100vw;
-  --screenHeight: 2620px;
+  --screenHeight: 2520px;
 }
-
 * {
   margin: 0;
   scroll-behavior: smooth;
 }
-html {
-  overflow-x: hidden;
-}
-body {
-  width: var(--screenWidth);
-}
+
 nav {
   position: fixed;
-  position: -webkit-sticky;
   z-index: 99;
   height: 100px;
-  width: 100%;
+  width: 100vw;
   top: 0px;
-  left: 0px;
+  bottom: 0px;
 
   background: #cdf5e8;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -59,11 +52,11 @@ nav > a:active {
 }
 
 .bodyContainer {
+  overflow: hidden;
   position: relative;
   margin-top: 100px;
   width: 100%;
-  height: var(--screenHeight);
-
+  height: 2460px;
   background: linear-gradient(180deg, #cdf5e8 21.88%, #ffc5eb 100%);
 }
 
@@ -76,7 +69,6 @@ nav > a:active {
   height: 585px;
   width: 100%;
 
-  filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.25));
   display: flex;
   justify-content: center;
   align-items: center;
@@ -85,9 +77,8 @@ nav > a:active {
 
 .idCard {
   width: 1234px;
-  height: 585px;
-  background: url("../images/id-card.svg");
-  background-repeat: no-repeat;
+  height: 100%;
+  background: url("../images/id-card.svg") no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -134,7 +125,7 @@ nav > a:active {
   width: var(--screenWidth);
   height: 1512px;
   left: 0px;
-  top: 713px;
+  top: 613px;
   display: flex;
   justify-content: space-around;
   flex-direction: column;
@@ -252,7 +243,7 @@ nav > a:active {
   width: var(--screenWidth);
   height: 262px;
   left: 0px;
-  top: 2302px;
+  top: 2162px;
   display: flex;
   justify-content: space-around;
   flex-direction: column;
@@ -337,7 +328,7 @@ nav > a:active {
   height: 37px;
   left: 0px;
   right: 1px;
-  top: 2583px;
+  top: 2423px;
   border: 1px solid #000000;
   border-width: 1px 1px 0 1px;
   box-sizing: border-box;
@@ -456,7 +447,7 @@ nav > a:active {
 
 @media screen and (max-width: 1024px) {
   .idCard {
-    height: 674px;
+    height: 585px;
     width: 891px;
     background: url("../images/id-card_1024.svg");
     background-repeat: no-repeat;
@@ -473,18 +464,25 @@ nav > a:active {
   .contactTitleLine {
     width: 400px;
   }
+  .rolesText {
+    font-size: 3vw;
+  }
 }
 
 @media screen and (max-width: 768px) {
   nav > a {
-    font-size: 5vw;
+    font-size: 4vw;
   }
   .cardContainer {
     margin-top: 80px;
   }
+  .idProfile {
+    width: 210px;
+    height: 210px;
+  }
   .idCard {
     width: 300px;
-    height: 693px;
+    height: 600px;
     background: url("../images/id-card_768.svg");
     background-repeat: no-repeat;
   }
@@ -494,7 +492,8 @@ nav > a:active {
   }
 
   .idName {
-    font-size: 6vw;
+    line-height: 100%;
+    font-size: 3.5rem;
   }
 
   .rolesTitleLine {
@@ -502,12 +501,15 @@ nav > a:active {
   }
   .rolesTitle,
   .contactTitle {
+    left: 0;
     display: flex;
     align-items: center;
     text-align: center;
-    text-decoration-line: underline;
     justify-content: center;
-    font-size: 12vw;
+    font-size: 5rem;
+  }
+  .rolesSubtitle {
+    font-size: 5vw;
   }
   .contactTitleLine {
     display: none;
@@ -523,6 +525,10 @@ nav > a:active {
   .linkText {
     display: none;
   }
+  .rolesTitle,
+  .contactTitle {
+    font-size: 3.5rem;
+  }
   .rolesCardPadding {
     justify-content: space-around;
     flex-direction: column;
@@ -536,17 +542,12 @@ nav > a:active {
     width: 50%;
     height: 50%;
   }
-
-  .idName {
-    font-size: 12vw;
-    line-height: 100%;
-  }
   .rolesSubtitle {
     font-size: 7vw;
     line-height: 100%;
   }
   .rolesText {
-    font-size: 6vw;
+    font-size: 5vw;
     line-height: 100%;
   }
   .instagram,
