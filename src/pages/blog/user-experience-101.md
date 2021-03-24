@@ -6,9 +6,9 @@ tags:
   - UXDesign
 ---
 ![](https://images.unsplash.com/photo-1587038787166-becd08a156f7?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80)
-
+<br/>
 ### "User experience (UX) design is the process design teams use to create products that provide meaningful and relevant experiences to users."
-
+<br/>
 “User Experience Design” is often used interchangeably with terms such as “User Interface Design” and “Usability”. However, while usability and user interface (UI) design are important aspects of UX design, they are subsets of it – UX design covers a vast array of other areas, too.
 
 <br/>
